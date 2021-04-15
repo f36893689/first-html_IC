@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <script src="jquery/jquery-3.3.1.min.js"> </script>
+        <meta charset="UTF-8">
+            <link href="css/teacher2.css"
+            type="text/css"
+            rel="stylesheet" >
+        <title>
+            教師介紹
+        </title>
+    </head>
+    <body>
+
+    <div class="all">
+        <div class="left"></div>
+
+        <div class="center">
+            <!--上層-->
+        <div class="top">
+            <div class="logo"> <a href="index.html"><img src="img/logo.png" height="120px"></a></div>
+            <div class="login"> 
+                <div class="loginlogo"><img src=img/icon_login.png onclick="javascript:location.href='login.html'"></div> <div class="logintxt"> <a href="login.html" style="color:black">登入</a></div>
+                <div class="contactus"><img src="img/icon_contactus.png" onclick="javascript:location.href='contectus.html'" ></div><div class="conttxt"> <a href="contectus.html" style="color:black">聯絡我們</a></div>
+              </div>
+        </div>
+            <!--選單列-->
+            <div id="menu">
+              <ul>
+                <li> <a href="index.html">首頁</a>                       
+                </li>
+                <li> <a href="classintroduce.html">班級介紹</a>
+                  <ul>
+                    <li><a href="course.html">課程介紹</a></li>
+                    <li><a href="teacher.html">教師介紹</a></li>
+                    <li><a href="classroom.html">教室介紹</a></li>                          
+                  </ul>
+                </li>
+                <li> <a href="info.html">個人資料</a>
+                  <ul>
+                          <li><a href="hw.html">作業繳交</a></li>
+                          <li><a href="grade.html">成績查詢</a></li>                              
+                        </ul>
+                    </li>
+                    <li> <a href="news.html">最新消息</a>
+                      <ul>                      
+                        <li><a href="schedule.html">行事曆</a></li>
+                        <li><a href="contectus.html">聯絡我們</a></li>
+                      </ul>
+                    </li>
+                    <li> <a href="disguss.html">討論區</a>
+                      <ul>
+                        <li><a href="gallery.html">活動剪影</a>
+                          <ul>
+                                  <li><a href="#Beef">105學年</a></li>
+                                  <li><a href="#Pork">106學年</a></li>
+                                  <li><a href="#Pork">107學年</a></li>
+                                </ul>
+                      </li>
+                        <li><a href="present.html">作品區</a></li>
+                      </ul>
+                    </li>
+                    <li> 
+                        <a href="area.html">輔導專區</a>
+                    </li>
+                  </ul>
+            </div>
+            
+                  <div class="mid">
+                    <div class="midleft">
+                            <div class="midleftup">  <p><a href="teacher.html">科技組</a></p></div>
+                            <div class="midleftdown"> <p><a href="teacher2.html">設計組</a></p></div>
+                    </div>
+                    <div class="midright">
+                      <div class="slideshow-container">
+                        <div class="mySlides fade">
+                          <div class="numbertext">1 / 3</div>
+                          <img src="img/teacher1.jpg" width="660px" height="450px">
+                          <div class="text"><font color="black">陳麗秋助理教授</font></div>
+                          <div class="blockquote"> 研究領域：平面設計、設計繪畫、兒童圖畫書研究、視覺傳達設計研究 <br>
+                            開課:藝術基礎(二)、平面設計、書報討論(四)</div>
+                        </div>
+                       
+                        <div class="mySlides fade">
+                          <div class="numbertext">2 / 3</div>
+                          <img src="img/teacher2.jpg" width="660px" height="450px">
+                          <div class="text"><font color="black">李佳穎助理教授</font></div>
+                          <div class="blockquote">研究領域：	工業設計、人機介面互動與設計、使用者經驗、設計心理學 <br>
+                          開課:人機互動概論、行動裝置視覺介面設計、色彩學</div>
+                        </div>
+                       
+                        
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="img/teacher3.jpg" width="660px" height="450px">
+                            <div class="text"><font color="black">張世明助理教授</font></div>
+                            <div class="blockquote">研究領域：影視動畫創作、廣告影片、視覺特效處理、新媒體設計 <br>
+                              開課:數位影音概論、動畫概論</div>
+                          </div>
+                       
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                      </div>
+                      <br>
+                       
+                      <div class="aa"style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                    
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="announce">
+                    <p> Copyright © 2018 YZUIC mail:s1052017@yzu.edu.tw</p>
+                  </div>
+         </div>
+
+    
+        <div class="right"></div>
+    </div>
+    
+    </body>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+         
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+         
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+         
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1} 
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none"; 
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block"; 
+          dots[slideIndex-1].className += " active";
+        
+    }
+        </script>
+</html>

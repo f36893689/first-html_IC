@@ -1,0 +1,368 @@
+body{
+    
+    margin:0;
+}
+.all{
+    width:1600px;
+    height: 1270px;
+}
+.left{
+    background-image:  url(img/background.jpg);
+    position: absolute;
+    width:300px;
+    height: 1270px;
+}
+.center{
+    position: absolute;
+    width:1000px;
+    height: 1270px;
+    left:300px;
+}
+.right
+{
+    background-image:  url(img/background.jpg);
+    position: absolute;
+    width:300px;
+    height: 1270px;
+    left:1300px;
+}
+.top{
+    width: 1000px;
+    height: 120px;
+    position: absolute;
+}
+.logo{
+    position: absolute;
+   
+}
+
+.login{
+    background: #e8e0d6;
+    width: 300px;
+    height:  30px;
+    position: absolute;
+    left: 680px;
+    top:60px;
+    text-align: center;
+  
+}
+.loginlogo
+{
+    position: absolute;
+    top:-5px;
+    left:20px;
+}
+.logintxt{
+    position: absolute;
+    top:5px;
+    left:80px;
+    
+}
+.logintxt>a{
+    text-decoration: none; 
+}
+.conttxt{
+    position: absolute;
+    top:5px;
+    left:200px; 
+}
+.conttxt>a{
+    text-decoration: none; 
+}
+.contactus>img{
+    position: absolute;
+    left:160px
+}
+#menu {
+	z-index: 5;
+    position: absolute;
+    top:120px;
+	/* 選單大小 */
+	width:1000px;
+	height:30px;
+}
+#menu ul {
+	/* 取消ul樣式符號 */
+	list-style-type:none;
+	/* 重設ul邊界與留白為零 */
+	margin:0;
+	padding:0;
+	/* 內有浮動元件時，需設overflow才會自動調整大小 */
+	overflow:auto;
+}
+* html #menu ul {
+	/* 解決IE6不理overflow問題，直接指定高度 */
+	height:30px;
+}
+#menu ul li {
+	/* 利用float讓第一層li水平排列 */
+	float:left;
+}
+/* 解決IE6條列式餘白問題*/
+* html #menu ul li {
+	display:inline;
+}
+#menu ul li a {
+	/* 將a改為區塊元件，以便指定寬高 */
+	display:block;
+	/* 這邊也要設float，否則IE6會以100%寬度顯示 */
+	float:left;
+	/* 固定高度 */
+	height:30px;
+	width: 150px;
+	text-align: center;
+}
+#menu ul li ul {
+	/* 讓第二層ul跳脫文件流以利定位 */
+	position:absolute;
+	/* 固定寬度 */
+	width:150px;
+	/* 避免出現捲軸 */
+	overflow:visible;
+	/* 讓ul與母階層li相同位置 */
+	clear:left;
+	margin-top: 30px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+/* 修正IE7絕對定位差異 */
+*:first-child+html #menu ul li ul {
+	margin-top:0;
+}
+/* 修正IE6絕對定位差異 */
+* html #menu ul li ul {
+	margin-top:0;
+}
+#menu ul li ul li {
+	/* 覆寫繼承自第一層的浮動設定 */
+	float:none;
+	text-align: center;
+}
+#menu ul li ul li a {
+	/* 覆寫繼承自第一層的浮動設定 */
+	float:none;
+	width: 100%;/* 註：display、height、padding繼承第一層的設定 */
+}
+#menu ul li ul li ul {
+	margin-top: -30px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 150px;
+	width: 100%;
+}
+/* 修正IE7絕對定位差異 */
+*:first-child+html #menu ul li ul li ul {
+	margin-top:-30px;
+}
+#menu ul li ul li ul li {
+/* width、float繼承第二層，免設定 */
+}
+#menu ul li ul li ul li a {
+/* width、float繼承第二層，免設定 */
+}
+/* ---------- 隱藏與顯示階層 ---------- */
+#menu ul li ul {
+	/* 預先隱藏第二層 */
+	visibility:hidden;
+}
+#menu ul li:hover ul {
+	/* 觸動第一層時，顯示第二層 */
+	visibility:visible;
+}
+#menu ul li:hover ul li ul {
+	/* 顯示第二層時，隱藏第三層，避免同時彈出 */
+	visibility:hidden;
+}
+#menu ul li ul li:hover ul {
+	/* 觸動第二層時，顯示第三層 */
+	visibility:visible;
+}
+#menu ul li ul li:hover ul li ul {
+	/* 顯示第三層時，隱藏第四層，避免同時彈出 */
+	visibility:hidden;
+}
+#menu ul li ul li ul li:hover ul {
+	/* 觸動第三層時，顯示第四層 */
+	visibility:visible;
+}
+/* ---------- 以下為美化用，非必需 ---------- */
+
+
+/* 預設字體 */
+#menu {
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+/* 第一層ul背景色彩與邊框 */
+#menu ul {
+	background:#6f6f6f;
+}
+/* 第一層a字型 */
+#menu ul li a {
+	color:#FFF;
+	text-decoration:none;
+	line-height: 30px;
+}
+/*第二層ul背景色彩與邊框  */
+#menu ul li ul {
+	background:#efefef;
+}
+/* 第二層a字型 */
+#menu ul li ul li a {
+	font-size:12px;
+	color:#333333;
+	text-decoration:none;
+}
+/* 觸動第一層li時，改變背景色 */
+#menu ul li:hover, #menu ul li a:hover {
+	background:#efefef;
+}
+#menu ul li:hover a {
+	color:#333333;
+}
+/* 觸動第二層以上li時改變背景色 */
+#menu ul li ul li:hover, #menu ul li ul li a:hover {
+	background:#dfdfdf;
+}
+.pic{
+	background-image: url(img/record.png);
+    margin: 10px;
+    width: 800px;
+    height:900px;
+    position: absolute;
+    left:9%;
+    top:200px;
+
+}
+.area{
+	color:990000;
+	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	font-family:微軟正黑體;
+	font-size: 56px;
+	line-height: 95px;
+	text-align: center;
+	border-radius: 10px;
+	margin: 10px;
+    width: 400px;
+    height:100px;
+    position: absolute;
+    left:28.7%;
+    border: 2px solid black;
+    top:250px;
+}
+.inside{
+	background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+	border-radius: 10px;
+	margin: 10px;
+    width: 600px;
+    height:600px;
+    position: absolute;
+    left:18.7%;
+    border: 2px solid black;
+    top:400px;
+}
+.a1{
+	line-height: 15px;
+	text-align: center;
+	margin: 10px;
+    width: 150px;
+    height:50px;
+    position: absolute;
+    left:25%;
+    top:450px;
+
+}
+.a2{
+	font-size: 18px;
+	margin: 10px;
+    width: 150px;
+    height:50px;
+    position: absolute;
+    left:28.5%;
+    top:540px;
+
+}
+.a3{
+	font-size: 18px;
+	margin: 10px;
+    width: 150px;
+    height:50px;
+    position: absolute;
+    left:27%;
+    top:650px;
+
+}
+.a4{
+	font-size: 18px;
+	margin: 10px;
+    width: 150px;
+    height:50px;
+    position: absolute;
+    left:27%;
+    top:760px;
+
+}
+.a5{
+	font-size: 18px;
+	margin: 10px;
+    width: 150px;
+    height:50px;
+    position: absolute;
+    left:26%;
+    top:870px;
+
+}
+.pic1{
+	background-image: url(img/live.jpg);
+	margin: 10px;
+    width: 100px;
+    height:100px;
+    position: absolute;
+    left:55%;
+    top:500px;
+}
+.pic2{
+	background-image: url(img/ucan.jpg);
+	margin: 10px;
+    width: 200px;
+    height:100px;
+    position: absolute;
+    left:50%;
+    top:620px;
+}
+.pic3{
+	background-image: url(img/Counseling.png);
+	margin: 10px;
+    width: 100px;
+    height:85px;
+    position: absolute;
+    left:55%;
+    top:745px;
+}
+.pic4{
+	background-image: url(img/equal.jpg);
+	margin: 10px;
+    width: 200px;
+    height:100px;
+    position: absolute;
+    left:50%;
+    top:850px;
+}
+.announce{
+    
+    margin: 0 10 0 10;
+    width: 980px;
+    height:100px;
+    position: absolute;
+    top:1170px;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  
+}
+.announce>p{
+	height: 10px;
+    position:absolute;
+    top:20px;
+    left:250px;
+    margin:40px 40 0 40;
+}
